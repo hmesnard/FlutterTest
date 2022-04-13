@@ -1,16 +1,15 @@
-# testmaps
+# FlutterTest
 
-A new Flutter project.
+Basic Flutter app that fetches capitals from a given continent and lists them with markers on a Google map.
 
-## Getting Started
+### Usage
 
-This project is a starting point for a Flutter application.
+```
+git clone https://github.com/hmesnard/FlutterTest && cd FlutterTest
+```
 
-A few resources to get you started if this is your first Flutter project:
+then open the project in Android Studio.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+It is possible to change the continent with the corresponding environment variable in .env file. The accepted values are : ```Africa, Americas, Asia, Europe, Oceania.```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+On the Google map, all capital cities are represented by a red marker, you can click on them to find some of the country's data.
