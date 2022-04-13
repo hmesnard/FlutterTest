@@ -40,7 +40,7 @@ class _MapScreenState extends State<MapScreen> {
             position: marker.position,
         onTap: () {
           Navigator.pushNamed(context, '/loading', arguments: {
-            'name': marker.markerId
+            'name': marker.markerId.value
           });
         })).toSet(),
       ),
