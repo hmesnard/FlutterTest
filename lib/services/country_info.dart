@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:http/http.dart';
 
 class CountryInfo {
@@ -11,7 +10,6 @@ class CountryInfo {
 
   Future<void> getInfo() async {
     try {
-      print('QQQQQQQ');
       Response response = await get(Uri(
           scheme: 'https',
           host: 'restcountries.com',
@@ -23,7 +21,6 @@ class CountryInfo {
       flagUrl = data['flags']['png'];
     }
     catch (e) {
-      print('lolilolilol');
       print(e);
     }
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:testmaps/services/city_markers.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class MapScreen extends StatefulWidget {
 
@@ -17,7 +18,7 @@ class _MapScreenState extends State<MapScreen> {
   Set<Marker> markers = {};
 
   void setupMarkers() async {
-    CityMarkers cityMarkers = CityMarkers(continent: 'europe');
+    CityMarkers cityMarkers = CityMarkers(continent: dotenv.env['CONTINENT'] as String);
     await cityMarkers.getMarkers();
     setState(() {
       markers = cityMarkers.markers;
